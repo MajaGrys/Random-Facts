@@ -1,0 +1,83 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(illustration-4603960_1920.jpg);
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+header {
+    font-family: 'Great Vibes';
+    font-size: clamp(75px, 7vw, 120px);
+    padding: 30px 30px 10px 30px;
+    animation: slideIn 3s backwards;
+}
+
+#fact {
+    padding: 0 20px;
+    height: 200px;
+    overflow: auto;
+    animation: slideIn 3s 1s backwards;
+}
+
+#buttons {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    animation: slideIn 3s 2s backwards;
+}
+
+button {
+    margin: 5px;
+    border: 0px;
+    background-color: transparent;
+}
+
+img {
+    height: 100px;
+}
+
+img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.slideIn {
+    animation: slideIn 3s 2s backwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-200%)
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-height: 800px) {
+    #buttons {
+        position: static;
+        padding: 20px;
+    }
+
+    #fact {
+        height: 250px;
+    }
+}
+
+@media screen and (min-height: 1000px), (min-width: 1000px) {
+    body {
+        margin: 100px auto;
+        max-width: 1000px;
+    }
+
+    img {
+        height: 150px;
+    }
+}
