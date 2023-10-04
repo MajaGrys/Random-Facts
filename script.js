@@ -9,7 +9,7 @@ function handleCats() {
     .then(data => document.getElementById('fact').textContent = data.data)}
 
 function handleNumbers() {
-    fetch('https://numbersapi.com/random/trivia?json')
+    fetch('http://numbersapi.com/random/trivia?json')
     .then(res => res.json())
     .then(data => document.getElementById('fact').textContent = data.text)}
 
